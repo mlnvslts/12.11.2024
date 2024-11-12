@@ -1,20 +1,30 @@
 #include <iostream>
-
 using namespace std;
+
 int main()
 {
-    float R1, R2, R3, R0;
-
-    cout << "R1 = ";
-    cin >> R1;
+    int k;
+    float p;
+    int r;
+    int profit = 0;
+    int years = 0;
+    int prec = k;
     
-    cout << "R2 = ";
-    cin >> R2;
-
-    cout << "R3 = ";
-    cin >> R3;
-
-    R0 = 1 /(1/R1+1/R2+1/R3);
-
-    std::cout << R0 << '\n';
+    cout << "Введите размер кредита: ";
+    cin >> k;
+    
+    cout << "Введите годовой процент: ";
+    cin >> p;
+    
+    cout << "Введите прибыль за год: ";
+    cin >> r;
+    
+    while (profit < k)
+    {
+        k+=prec*(p/100);
+        profit+=r;
+        ++years;
+    }
+    
+    cout << "Кредит будет выплачен за " <<years<< "лет";
 }
