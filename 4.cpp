@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
     float u = 0.5;
     float v = 0.9;
     float w = 1;
@@ -38,5 +37,4 @@ int main()
     }
     
     cout << "Через" << days << "дней" << endl;
-    
 }
